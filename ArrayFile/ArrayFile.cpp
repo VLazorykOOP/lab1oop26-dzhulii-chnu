@@ -76,31 +76,31 @@ void task3v5() {
     cout << "Enter number of elements: ";
     cin >> n;
 
-    int* a = new int[n];
+    int* ab = new int[2*n];
 
     for (i = 0; i < (2 * n); i++) {
         cout << "Enter element " << i + 1 << ": ";
-        cin >> a[i];
+        cin >> ab[i];
     }
 
     //avg
     for (i = 0; i < n; i++) {
-        sum += a[i];
+        sum += ab[i];
     }
 
     avg = (float)sum / n;
     sum = 0;
     //sum
     for (i =n; i < (2 * n); i++) {
-        if (a[i] > avg) {
-            sum += a[i];
+        if (ab[i] > avg) {
+            sum += ab[i];
         }
     }
 
     cout << "result: " << sum << endl;
     //cout << "average: " << avg << endl;
 
-    delete[] a;
+    delete[] ab;
 
 }
 
