@@ -84,14 +84,14 @@ void task3v5() {
     }
 
     //avg
-    for (i = 1; i < n; i++) {
+    for (i = 0; i < n; i++) {
         sum += a[i];
     }
 
-    avg = (float)sum / (n - 1);
+    avg = (float)sum / n;
     sum = 0;
     //sum
-    for (i = (n + 1); i < (2 * n); i++) {
+    for (i =n; i < (2 * n); i++) {
         if (a[i] > avg) {
             sum += a[i];
         }
